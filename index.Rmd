@@ -1,0 +1,44 @@
+---
+title: "Developing Data Products Course Project"
+author: "Tomer Einhorn"
+date: "8/6/2020"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message = FALSE, comment=NA)
+```
+
+# Introduction
+
+
+This presentation is part of the final project in Coursera's Developing Data Products, as part of the Data Science Specialization. It is meant to give you an explanation on the ShinyApp which was also created as part of this project.
+
+
+# Galton's parents and children hieghts data set
+
+The Shiny App I produced is meant to predict a child's hieght using his/ hers 
+parents height.  A look at the data base is as follows:
+
+```{r}
+library(UsingR)
+head(galton)
+```
+
+# Prediction Model
+
+The prediction was done by a applying a linear regression model on Galton's
+data set:
+
+```{r}
+model <- lm(child ~ parent, data = galton)
+```
+
+# Ready to give it a try?
+
+* see the Shiny app at [here](https://tomereinhorn.shinyapps.io/courseproject/).
+
+* Get the app source code on [github](https://github.com/TomerEinhorn/DevDataProductCourseProject). 
+
+
+
